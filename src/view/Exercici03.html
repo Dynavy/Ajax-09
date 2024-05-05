@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici2</title>
+    <link rel="stylesheet" href="../assets/css/exercici03.css">
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/Exercici03.js" defer></script>
+</head>
+
+<body>
+
+    <div class="first-content">
+
+        <form action="guarda_numero.php">
+
+            Set combinació: <input type="number" class="smallInput" placeholder="num1" name="num1">
+            <input type="number" class="smallInput" min="0" max="9" placeholder="num2" name="num2">
+            <input type="number" class="smallInput" min="0" max="9" placeholder="num3" name="num3">
+            <br>
+            <input type="reset" id="showSecondContent" min="0" max="9" class="margin-button" value="GUARDAR COMBINACIÓ">
+        </form>
+
+    </div>
+
+    <div class="second-content">
+
+        <form action="check_numero.php">
+            Check combinació: <input type="number" class="smallInput" placeholder="num1" name="compararNum1">
+            <input type="number" class="smallInput" placeholder="num2" name="compararNum2">
+            <input type="number" class="smallInput" placeholder="num3" name="compararNum3">
+            <br>
+            <input type="button" class="margin-button" id="hitCombination" value="ENCERTAR COMBINACIÓ">
+            <br>
+            <input type="button" class="margin-button" id="showTrys" value="MOSTRAR INTENTS">
+            <input type="button" class="margin-button" id="end" value="FI">
+            <input type="button" class="margin-button" id="reintentar" value="Reintentar">
+        </form>
+
+    </div>
+
+    <div class="centrar">   
+    <div id="mostrarIntents"></div>
+
+     <input type="button" class="margin-button" id="tornarJugar" value="Tornar a jugar.">
+    </div>
+    <div id="resultat"></div>
+
+    <div id="numerosGuardados"></div>
+  
+    <div id="error-message"></div>
+
+</body>
+
+</html>

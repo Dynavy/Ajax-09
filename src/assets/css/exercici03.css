@@ -1,0 +1,70 @@
+.first-content {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.margin-button {
+    margin: 3px;
+}
+
+body {
+    background-color: beige;
+}
+
+.smallInput {
+    width: 40px;
+}
+
+.second-content {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.second-content {
+    display: none;
+}
+
+#reintentar {
+    display: none;
+}
+
+#tornarJugar {
+    display: none;
+}
+
+.centrar {
+    position: absolute;
+    position: 50%;
+    left: 22%;
+    top: 45%;
+    color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+#numerosGuardados {
+    position: absolute;
+    top: 27%;
+    left: 42%;
+    color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+#resultat {
+    position: absolute;
+    top: 58%;
+    left: 44%;
+    color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
