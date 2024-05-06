@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num2 = isset($_POST['compararNum2']) ? ($_POST['compararNum2']) : '';
     $num3 = isset($_POST['compararNum3']) ? ($_POST['compararNum3']) : '';
 
-    // Guardem a variables de sesio els numeros introduits per el usuari en el moment de comparar.
+    // Guardem a variables de sessió els numeros introduïts per el usuari en el moment de comparar.
     $_SESSION['numero1'] = $num1;
     $_SESSION['numero2'] = $num2;
     $_SESSION['numero3'] = $num3;
@@ -28,6 +28,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'num2php' => $num2 == $num2Check,
         'num3php' => $num3 == $num3Check
     );
+
+
+    // Creem un array que emmagatzemi 
+    $intentos = isset($_SESSION['intentos']) ? $_SESSION['intentos'] : [];
+    // Guardem cada intent de l'usuari i si es acertat o no.
+    $intentos[] = ['numero' => $num1, 'acertado' => ($num1 == $num1Check)];
+    $intentos[] = ['numero' => $num2, 'acertado' => ($num2 == $num2Check)];
+    $intentos[] = ['numero' => $num3, 'acertado' => ($num3 == $num3Check)];
+    // Hem guardat a la variable de sessió, els intents de l'usuari.
+    $_SESSION['intentos'] = $intentos;
 
     // Comprovar si els 3 numeros han sigut acertats.
     $totEncertat = ($num1 == $num1Check) && ($num2 == $num2Check) && ($num3 == $num3Check);
